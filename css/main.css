@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html {
+    font-size: 18px;
+    background-repeat: no-repeat;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main {
+    width: 75.8rem;
+    padding-left: 2rem;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+}
+
+.header-wrap {
+    width: 100%;
+}
+
+.logo-wrap {
+    display: inline-block;
+}
+
+
+.logo-wrap {
+    padding-left: 7rem;
+    padding-top: 2rem;
+}
+
+.logo>a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.logo a:hover, .logo span:hover{
+    color: #F26522;
+}
+
+.content a:hover:nth-child(3){
+    color: #F26522;
+}
+
+
+.logo::before {
+    content: '';
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    float: left;
+    width: 71px;
+    height: 54px;
+    background-size: contain;
+}
+
+/* ВОТ ЭТО РЕШЕНИЕ! не думал, не гадал */
+.logo:hover:before {
+    content: '';
+    background-image: url("../img/logo2.png");
+    background-repeat: no-repeat;
+    float: left;
+    width: 71px;
+    height: 54px;
+    background-size: contain;
+}
+
+.info {
+    display: inline-block;
+    text-align: right;
+    padding-left: 37.4rem;
+}
+
+.email {
+    display: inline-block;
+}
+
+.logo span {
+    font-size: 1rem;
+    font-weight: bold
+
+}
+
+.logo span {
+    float: left;
+    color: white;
+}
+
+.content > div {
+    float: left;
+    text-align: center;
+    padding: 2rem;
+}
+
+.content {
+    width: 100%;
+    padding: 5rem;
+    padding-top: 0rem;
+}
+
+.img-bg-1 {
+    background-image: url("../img/Card 1.png");
+}
+.img-bg-2 {
+    background-image: url("../img/Card 2.png");
+}
+.img-bg-3 {
+    background-image: url("../img/Card 3.png");
+}
+.img-bg-4 {
+    background-image: url("../img/Card 4.png");
+}
+.img-bg-5 {
+    background-image: url("../img/Card 5.png");
+}
+.img-bg-6 {
+    background-image: url("../img/Card 6.png");
+}
+
+.cover-table-1 {
+    background-color: #F26522;
+    padding-top: .5rem;
+    width: 16.9rem;
+}
+
+[class|="img-bg"] {
+    border: solid 2px;
+    border-image: linear-gradient(to top, transparent 20%, white 70%);
+    border-image-slice: 1;
+    background-repeat: no-repeat;
+    width: 17rem;
+    height: 11rem;
+    padding-top: 42%;
+
+}
+
+/* стрелочка для скрытого контейнера */
+
+.text-details>a::after  {
+    content: '';
+    background-image: url("../img/Arrow.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    margin-left: .8rem;
+}
+
+.text-price span:nth-child(1) {
+    font-size: .9rem;
+}
+
+.text-price span:nth-child(3) {
+    padding-right: 5rem;
+}
+
+.text-details, .text-price {
+    display: inline-block;
+    text-align: left;
+    padding-bottom: .5rem;
+    color: white;
+}
+
+.text-price span {
+    font-size: 1.4rem;
+}
+
+/* Скрытый блок */
+.cover-table-1 {
+    display: none;
+}
+
+.img-bg-1:hover .cover-table-1, 
+.img-bg-2:hover .cover-table-1, 
+.img-bg-3:hover .cover-table-1, 
+.img-bg-4:hover .cover-table-1, 
+.img-bg-5:hover .cover-table-1, 
+.img-bg-6:hover .cover-table-1
+{
+    display: block;
+}
+/* Или, можно было использовать visibility hidden/visible */
+
+footer {
+    display: inline-block;
+    color: white;
+    font-size: .6rem;
+    width: 100%;
+}
+
+footer div {
+    text-align: center;
+    padding-bottom: 2rem;
+}
