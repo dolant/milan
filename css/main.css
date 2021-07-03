@@ -25,22 +25,37 @@ main {
 }
 
 .logo-wrap {
-    display: inline-block;
-}
-
-
-.logo-wrap {
     padding-left: 7rem;
-    padding-top: 2rem;
-}
-
-.logo>a {
-    font-size: 1.6rem;
-    font-weight: bold;
+    padding-top: 1.2rem;
     display: inline-block;
 }
 
-.logo a:hover, .logo span:hover{
+.logo > a {
+    font-weight: bold;
+    display: block;
+    padding-top: 1rem;
+}
+
+.main__logo {
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    float: left;
+    color: white;
+    display: inline-block;
+}
+
+.main__logo p {
+    margin: 0;
+    display: inline-block;
+}
+
+.main__logo p:nth-child(2) {
+    vertical-align: top;
+    font-size: 1.03rem;
+}
+
+.main__logo span:hover{
     color: #F26522;
 }
 
@@ -48,53 +63,49 @@ main {
     color: #F26522;
 }
 
-
-.logo::before {
+.main__logo::before {
     content: '';
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     float: left;
-    width: 71px;
+    width: 70px;
     height: 54px;
+    margin-top: .13rem;
     background-size: contain;
 }
 
-/* ВОТ ЭТО РЕШЕНИЕ! не думал, не гадал */
-.logo:hover:before {
+/* Смена цвета лого при наведении */
+.main__logo:hover::before {
     content: '';
     background-image: url("../img/logo2.png");
     background-repeat: no-repeat;
     float: left;
-    width: 71px;
+    width: 70px;
     height: 54px;
+    margin-top: .13rem;
     background-size: contain;
+}
+
+.logo a:hover {
+    color: #F26522;
 }
 
 .info {
     display: inline-block;
     text-align: right;
-    padding-left: 37.4rem;
+    padding-left: 34.4rem;
 }
 
 .email {
     display: inline-block;
 }
 
-.logo span {
-    font-size: 1rem;
-    font-weight: bold
-
-}
-
-.logo span {
-    float: left;
-    color: white;
-}
-
 .content > div {
     float: left;
     text-align: center;
     padding: 2rem;
+    display: block;
+    width: 33%;
 }
 
 .content {
@@ -128,6 +139,15 @@ main {
     width: 16.9rem;
 }
 
+.wrap__cards:hover>a {
+    color: #F26522;
+}
+
+.wrap__cards:hover .cover-table-1{
+    visibility: visible;
+    
+}
+
 [class|="img-bg"] {
     border: solid 2px;
     border-image: linear-gradient(to top, transparent 20%, white 70%);
@@ -136,7 +156,6 @@ main {
     width: 17rem;
     height: 11rem;
     padding-top: 42%;
-
 }
 
 /* стрелочка для скрытого контейнера */
@@ -172,7 +191,7 @@ main {
 
 /* Скрытый блок */
 .cover-table-1 {
-    display: none;
+    visibility: hidden;
 }
 
 .img-bg-1:hover .cover-table-1, 
@@ -182,7 +201,7 @@ main {
 .img-bg-5:hover .cover-table-1, 
 .img-bg-6:hover .cover-table-1
 {
-    display: block;
+    visibility: visible;
 }
 /* Или, можно было использовать visibility hidden/visible */
 
